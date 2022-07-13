@@ -108,8 +108,9 @@ class GroceryListActivity : AppCompatActivity(), NewItemDialogFragment.NewItemDi
             binding.rvGroceryList.adapter?.notifyDataSetChanged()
         }
 
-        // TODO: update the total amount and addItemButton with the binding
-        // groceriesTotal.text = viewModel.getTotal().toString()
+        // TO DO: update the total amount and addItemButton with the binding
+        // binding.totalAmount = viewModel.getTotal().toString()
+        binding.totalAmount = String.format("%.2f", viewModel.getTotal())
 
         Snackbar.make(binding.addItemButton, "Item Added Successfully", Snackbar.LENGTH_LONG)
             .setAction("Action", null).show()
